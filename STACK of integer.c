@@ -20,6 +20,7 @@ bool isPalindrome(int arr[], int n);
 void checkOverflowUnderflow(Stack *s);
 
 int main() {
+    printf("Ashish's(1AY23CS040) Program!\n\n");
     Stack stack;
     initializeStack(&stack);
     int choice, value;
