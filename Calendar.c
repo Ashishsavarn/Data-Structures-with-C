@@ -16,7 +16,7 @@ void create(struct Day *day){
 }
 
 void read(struct Day *calender, int size){
-    for(int i=0; i < size; i++){
+    for(int i=0; i<size; i++){
         printf("\nEnter the details for day %d:\n", i + 1);
         create(&calender[i]);
     }
@@ -24,7 +24,7 @@ void read(struct Day *calender, int size){
 
 void display(struct Day *calender, int size){
     printf("\nWeek activity details:\n");
-    for(int i=0; i < size; i++){
+    for(int i=0; i<size; i++){
         printf("Day %d:\n", i + 1);
         printf("Day name: %s\n", calender[i].dayname);
         printf("Date: %d\n", calender[i].date);
@@ -34,7 +34,7 @@ void display(struct Day *calender, int size){
 }
 
 void freeMemory(struct Day *calender, int size){
-    for(int i = 0; i < size; i++){
+    for(int i=0; i<size; i++){
         free(calender[i].dayname);
         free(calender[i].activity);
     }
