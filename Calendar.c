@@ -8,15 +8,15 @@ struct Day{
 };
 
 void create(struct Day *day){
-    day->dayname = (char*) malloc(sizeof(char) * 20);  
-    day->activity = (char*) malloc(sizeof(char) * 100);
+    day->dayname=(char*) malloc(sizeof(char) * 20);  
+    day->activity=(char*) malloc(sizeof(char) * 100);
     printf("Enter the day name: "); scanf("%s", day->dayname);
     printf("Enter the date: "); scanf("%d", &day->date);
     printf("Enter the activity for the day: "); scanf("%s", day->activity);
 }
 
 void read(struct Day *calender, int size){
-    for(int i = 0; i < size; i++){
+    for(int i=0; i < size; i++){
         printf("\nEnter the details for day %d:\n", i + 1);
         create(&calender[i]);
     }
@@ -24,7 +24,7 @@ void read(struct Day *calender, int size){
 
 void display(struct Day *calender, int size){
     printf("\nWeek activity details:\n");
-    for(int i = 0; i < size; i++){
+    for(int i=0; i < size; i++){
         printf("Day %d:\n", i + 1);
         printf("Day name: %s\n", calender[i].dayname);
         printf("Date: %d\n", calender[i].date);
